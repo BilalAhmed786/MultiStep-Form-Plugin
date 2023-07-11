@@ -4,10 +4,13 @@
     session_start();
 
   
+    
+    
     if(isset($_POST['orderplace'])){
 
 
         $firstitem= $_POST['firstitem'];
+        
         $date = $_POST['date'];
 
         
@@ -16,12 +19,7 @@
        $wpdb->query("INSERT INTO wp_bookopitment(consultation,date) VALUES ('$firstitem','$date')");
    
     
-   
-
-
-    $orderdplace='<p>Order place successfully</p>';
-
-    header('Location:http://localhost/testtheme/checkout?orderplace='.$orderdplace);
+     
 
 }
 
@@ -31,17 +29,16 @@
 if (isset($_POST['consultation'])) {
 
   $sesvalue = $_POST['session'];
+  
+  $image = $_POST['image'];
 
-  $date = $_SESSION['time2'];
+  $date =$_POST['date'] ;
 
-
-  $image = $_SESSION['image2'];
-
-  foreach ($sesvalue as $ses) {
+ foreach ($sesvalue as $ses) {
 
   global $wpdb;
 
-    $wpdb->query("INSERT INTO bookconsltation(opitment1,date) VALUES('$ses','$date')");
+    $wpdb->query("INSERT INTO wp_bookopitment(consultation,date) VALUES('$ses','$date')");
       
   }
 
@@ -49,16 +46,12 @@ if (isset($_POST['consultation'])) {
 
     global $wpdb;
 
-      $wpdb->query("INSERT INTO images(image,date) VALUES ('$image','$date')");
+      $wpdb->query("INSERT INTO wp_images(image,date) VALUES ('$image','$date')");
 
          
       }
 
-      echo  '<script>sessionStorage.clear()</script>'; 
-        
-      $orderdplace='<p>Order place successfully</p>';
-
-      header('Location:http://localhost/testtheme/checkout?orderplace='.$orderdplace);
+    
 
 }
 
@@ -68,35 +61,28 @@ if (isset($_POST['opitment'])) {
 
   $sesvalue = $_POST['session'];
 
-  $date = $_SESSION['time3'];
+  $date=$_POST['date'];
 
+  $image=$_POST['image'];
 
-  $image = $_SESSION['image3'];
 
   foreach ($sesvalue as $ses) {
     
     global $wpdb;
 
-    $wpdb->query("INSERT INTO bookconsltation(opitment1,date) VALUES('$ses','$date')");
+    $wpdb->query("INSERT INTO wp_bookopitment(consultation,date) VALUES('$ses','$date')");
     
   }
 
   if ($image) {
 
-global $wpdb;
+    global $wpdb;
     
-    $wpdb->query("INSERT INTO images(image,date) VALUES ('$image','$date')");
+    $wpdb->query("INSERT INTO wp_images(image,date) VALUES('$image','$date')");
 
   }
 
-    echo '<script>sessionStorage.clear()<script>';
-
-
-    $orderdplace='<p>Order place successfully</p>';
-
-    header('Location:http://localhost/testtheme/checkout?orderplace='.$orderdplace);
-
-
+   
 }
 
 
@@ -106,16 +92,18 @@ if (isset($_POST['lastprocedure'])) {
 
 $sesvalue = $_POST['session'];
 
-$date = $_SESSION['time4'];
+$date = $_POST['date'];
 
 
-$image = $_SESSION['image4'];
+$image = $_POST['image'];
+
+
 
 foreach ($sesvalue as $ses) {
 
   global $wpdb;
 
-    $wpdb->query("INSERT INTO bookconsltation(opitment1,date) VALUES('$ses','$date')");
+    $wpdb->query("INSERT INTO wp_bookopitment(consultation,date) VALUES('$ses','$date')");
     
 }
 
@@ -123,28 +111,23 @@ if ($image) {
 
   global $wpdb;
     
-  $wpdb->query("INSERT INTO images(image,date) VALUES ('$image','$date')");
+  $wpdb->query("INSERT INTO wp_images(image,date) VALUES('$image','$date')");
  
 }
 
   
-    echo '<script>sessionStorage.clear()<script>';
-
-
-    $orderdplace='<p>Order place successfully</p>';
-
-    header('Location:http://localhost/testtheme/checkout?orderplace='.$orderdplace);
-
 }
+
 
 ?>
 
 
 
+<script>
 
+//remove session from session storage
+sessionStorage.clear()
+    
+window.location = "http://localhost/testtheme/checkout?orderplace=Thanks for your order"
 
-
-
-
-
-
+</script>

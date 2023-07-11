@@ -24,19 +24,22 @@ if (isset($_POST['consultation'])) {
 
     $time = $_POST['datetimeconsultation'];
 
-    $file = $_FILES['imagefile']['name'];
+    $file = $_FILES['imagefile'];
+
+    // Get the destination path for the uploaded file
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
     
-    $path = $_FILES['imagefile']['tmp_name'];
+    $file_path = $upload_dir . basename($file['name']);
+
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
 
 
     $_SESSION['time2'] = $time;
 
-    $_SESSION['image2'] = $file;
+    $_SESSION['image2'] = $file['name'];
 
-    $fil = plugins_url('images/'. $file, __FILE__);
-
-
-    move_uploaded_file($_SERVER['DOCUMENT_ROOT'].$path,$_SERVER['DOCUMENT_ROOT'].$fil);
+    
 }
 
 if (isset($_POST['appointment'])) {
@@ -54,21 +57,26 @@ if (isset($_POST['finalprocedure'])) {
 
     $date = $_POST['finalproceduredate'];
     
-    $imagename = $_FILES['imagefinalpro']['name'];
-        
-    $imagepath = $_FILES['imagefinalpro']['tmp_name'];
+    $file = $_FILES['imagefinalpro'];
+
 
     
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
+  
+    
+    $file_path = $upload_dir . basename($file['name']);
 
-    $_SESSION['image2'] = $imagename;
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
+    
+
+    $_SESSION['image2'] = $file['name'];
 
     $_SESSION['time2'] = $date;
 
-    $imagenam=plugins_url('images/'. $imagename, __FILE__);
+    
 
-
-
-    move_uploaded_file($_SERVER['DOCUMENT_ROOT'].$imagepath,$imagenam);
+   
 }
 
 
@@ -78,16 +86,25 @@ if (isset($_POST['consul-tation'])) {
 
     $time = $_POST['datetimeconsultation'];
 
-    $file = $_FILES['imagefile']['name'];
-    $path = $_FILES['imagefile']['tmp_name'];
+    $file = $_FILES['imagefile'];
+    
+
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
+    
+    $file_path = $upload_dir . basename($file['name']);
+
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
+
+
 
 
     $_SESSION['time3'] = $time;
 
-    $_SESSION['image3'] = $file;
+    $_SESSION['image3'] = $file['name'];
 
 
-    move_uploaded_file($path, '../images/' . $file);
+   
 }
 
 if (isset($_POST['appoint-ment'])) {
@@ -104,17 +121,24 @@ if (isset($_POST['appoint-ment'])) {
 if (isset($_POST['final-procedure'])) {
 
     $date = $_POST['finalproceduredate'];
-    $imagename = $_FILES['imagefinalpro']['name'];
-    $imagepath = $_FILES['imagefinalpro']['tmp_name'];
+    $file = $_FILES['imagefinalpro'];
+   
+
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
+    
+    $file_path = $upload_dir . basename($file['name']);
+
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
 
 
 
-    $_SESSION['image3'] = $imagename;
+
+    $_SESSION['image3'] = $file['name'];
 
     $_SESSION['time3'] = $date;
 
-    plugins_url('images/'. $imagename, __FILE__);
-    //move_uploaded_file($imagepath, '../images/'. $imagename);
+  
 }
 
 
@@ -124,16 +148,25 @@ if (isset($_POST['consultation-final'])) {
 
     $time = $_POST['datetimeconsultation'];
 
-    $file = $_FILES['imagefile']['name'];
-    $path = $_FILES['imagefile']['tmp_name'];
+    $file = $_FILES['imagefile'];
+   
+
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
+    
+    $file_path = $upload_dir . basename($file['name']);
+
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
+
+
 
 
     $_SESSION['time4'] = $time;
 
-    $_SESSION['image4'] = $file;
+    $_SESSION['image4'] = $file['name'];
 
-
-    //move_uploaded_file($path, '../images/'. $file);
+        echo $_SESSION['image4'];
+   
 }
 
 if (isset($_POST['appointment-final'])) {
@@ -150,17 +183,24 @@ if (isset($_POST['appointment-final'])) {
 if (isset($_POST['finalprocedure-final'])) {
 
     $date = $_POST['finalproceduredate'];
-    $imagename = $_FILES['imagefinalpro']['name'];
-    $imagepath = $_FILES['imagefinalpro']['tmp_name'];
+    $file = $_FILES['imagefinalpro'];
+   
+
+    $upload_dir = plugin_dir_path(__FILE__) . 'images/';
+    
+    $file_path = $upload_dir . basename($file['name']);
+
+    // Move the uploaded file to the destination folder
+    move_uploaded_file($file['tmp_name'], $file_path);
 
 
-
-    $_SESSION['image4'] = $imagename;
+  
+   $_SESSION['image4'] = $file['name'];
 
     $_SESSION['time4'] = $date;
 
 
-    move_uploaded_file($imagepath, '../images/'. $imagename);
+  
 }
 
 //step 4 checkout data
@@ -288,12 +328,13 @@ function multi_form_step_checkout()
                                 <div id=valueshow></div>
                             </div>
                             <div class="form-group">
-                                <input id="date" type="text" value="<?php echo $_SESSION['time2'] ?>" readonly>
+                                <input id="date" type="text" name='date' value="<?php echo $_SESSION['time2'] ?>" readonly>
 
                             </div>
 
                             <div class="form-group">
-                                <input type="hidden" value="<?php if (isset($_SESSION['image2'])) {
+                                
+                                <input type="hidden" name='image' value="<?php if (isset($_SESSION['image2'])) {
                                                                 echo $_SESSION['image2'];
                                                             } ?>">
                             </div>
@@ -397,9 +438,9 @@ function multi_form_step_checkout()
                                 <div id=valueshow></div>
                             </div>
                             <div class="form-group">
-                                <input id="date" type=text value="<?php echo $_SESSION['time3'] ?>" readonly>
+                                <input id="date" type=text name='date' value="<?php echo $_SESSION['time3'] ?>" readonly>
                             </div>
-                            <input type=hidden value="<?php echo $_SESSION['image3'] ?>">
+                            <input type=hidden name='image' value="<?php echo $_SESSION['image3'] ?>">
 
                     </div>
                     <input class='btnorder' type=submit name="opitment" value=submit>
@@ -412,6 +453,7 @@ function multi_form_step_checkout()
                 <script>
                     var ming = sessionStorage.getItem('step3');
                     var browsming = sessionStorage.getItem('brows-ming');
+                    var browsming2 = sessionStorage.getItem('brows-ming2');
                     var artistselect1 = sessionStorage.getItem('artistselect1');
                     var artistselect2 = sessionStorage.getItem('artistselect2');
                     var artistselect3 = sessionStorage.getItem('artistselect3');
@@ -434,6 +476,7 @@ function multi_form_step_checkout()
 
                         ming,
                         browsming,
+                        browsming2,
                         artistselect1,
                         artistselect2,
                         artistselect3,
@@ -521,12 +564,12 @@ function multi_form_step_checkout()
                                 <div id=valueshow></div>
                             </div>
                             <div class="form-group">
-                                <input id="date" type=text value="<?php echo $_SESSION['time4'] ?>" readonly>
+                            <input id="date" type=text name='date' value="<?php echo $_SESSION['time4'] ?>" readonly>
                             </div>
 
-                            <input type=hidden value="<?php echo $_SESSION['image4'] ?>">
+                            <input type=hidden  name="image" value="<?php echo $_SESSION['image4'] ?>">
 
-                    </div>
+                            </div>
                     <input class='btnorder' type=submit name=lastprocedure value=submit>
 
                     </form>
@@ -537,7 +580,7 @@ function multi_form_step_checkout()
 
 
                 <script>
-                    var ming = sessionStorage.setItem('step4', ming);
+                    var ming = sessionStorage.getItem('step4', ming);
                     var browstreat = sessionStorage.getItem('browstreat');
                     var borwstreat2 = sessionStorage.getItem('browstreat2');
                     var consultation = sessionStorage.getItem('consultation');
@@ -618,10 +661,17 @@ function multi_form_step_checkout()
 
     <?php
 
+    }elseif(isset($_GET['orderplace'])){
+
+            
+            $orderplace = $_GET['orderplace'];
+
+            
+            echo '<p style=color:red;text-align:center>'.$orderplace.'</p>';
+
     }else{
 
-            echo '<p style=color:red;text-align:center;background:light-gray>No item in the checkout </p>';
-
+             echo "<p style=color:red;text-align:center>No item selected yet</p>";
     }
 }
 

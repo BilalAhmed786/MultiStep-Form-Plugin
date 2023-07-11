@@ -35,6 +35,5 @@ if (isset($_POST['submit'])) {
 <script>
     sessionStorage.clear()
 
-
     window.location = "http://localhost/moaibeauty/multi-step3/index.php"
 </script>

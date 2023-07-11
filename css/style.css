@@ -252,12 +252,12 @@ input#img-consultation {
 /* checkout list */
 .checkoutcontainer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 35px;
 }
 
 input#firstitem {
     text-align: center;
-    width:33%;
+    width:30%;
     height: 44px;
     border: 1px solid lightgray;
     outline:none;
@@ -267,7 +267,7 @@ input#firstitem {
 
 input#date {
 text-align: center;
-width:33%;
+width:30%;
 height: 44px;
 font-family: 'Montserrat';
 
