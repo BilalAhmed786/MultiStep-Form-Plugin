@@ -278,3 +278,10 @@ input.btnorder {
     /* background: transparent; */
     border: none;
 }
+
+
+.next action-button{
+
+display:none;
+
+}

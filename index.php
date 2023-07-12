@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name:Multi-step Form
- * Description:Form for Multi services.
+ * Plugin Name:Multi-Step Form
+ * Description:Multi-steps forms for beauty salons.
  * Version: 1.0.0
  * Author:Bilal Ahmed  
  */
@@ -25,7 +25,9 @@ function saificontactform_custom_scripts(){
 
 
 
-//pages create on plugin activation
+
+    //pages create on plugin activation
+
 register_activation_hook( __FILE__, 'multi_form_activate' );
 
 function multi_form_activate() {

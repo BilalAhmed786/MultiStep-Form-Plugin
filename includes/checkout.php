@@ -22,22 +22,25 @@
 
 if (isset($_POST['consultation'])) {
 
-    $time = $_POST['datetimeconsultation'];
+    $time = isset($_POST['datetimeconsultation']);
 
-    $file = $_FILES['imagefile'];
+    $file = isset($_FILES['imagefile']);
+
+
+    $filename =isset($_FILES['name']);
 
     // Get the destination path for the uploaded file
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
     
-    $file_path = $upload_dir . basename($file['name']);
+    $file_path = $upload_dir . basename(isset($file['name']));
 
     // Move the uploaded file to the destination folder
-    move_uploaded_file($file['tmp_name'], $file_path);
+    move_uploaded_file(isset($file['tmp_name']), $file_path);
 
 
     $_SESSION['time2'] = $time;
 
-    $_SESSION['image2'] = $file['name'];
+    $_SESSION['image2'] = isset($file['name']);
 
     
 }
@@ -396,7 +399,7 @@ function multi_form_step_checkout()
 
                     }
                 </script>
-                <script src='sessionsdata.js'></script>
+                
 
 
             </body>
@@ -462,7 +465,7 @@ function multi_form_step_checkout()
                     var artistselect6 = sessionStorage.getItem('artistselect6');
                     var artistselect7 = sessionStorage.getItem('artistselect7');
                     var artistselect8 = sessionStorage.getItem('artistselect8');
-                    var lastprocedure = sessionStorage.getItem('lastprocedure');
+                    var lastprocedure = sessionStorage.getItem('lastpro');
                     var consultation1 = sessionStorage.getItem('consultation1');
                     var consultation2 = sessionStorage.getItem('consultation2');
                     var consultation3 = sessionStorage.getItem('consultation3');
@@ -521,7 +524,7 @@ function multi_form_step_checkout()
 
                     }
                 </script>
-                <script src='sessionsdata.js'></script>
+                
 
 
             </body>
@@ -583,10 +586,10 @@ function multi_form_step_checkout()
                     var ming = sessionStorage.getItem('step4', ming);
                     var browstreat = sessionStorage.getItem('browstreat');
                     var borwstreat2 = sessionStorage.getItem('browstreat2');
-                    var consultation = sessionStorage.getItem('consultation');
+                    var consultation = sessionStorage.getItem('consult');
                     var consultation2 = sessionStorage.getItem('consultation2');
                     var consultation4 = sessionStorage.getItem('consultation4');
-                    var lastprocedure = sessionStorage.getItem('lastprocedure');
+                    var lastprocedure = sessionStorage.getItem('selfprocedure');
                     var lastprocedure2 = sessionStorage.getItem('lastprocedure2');
                     var artistselect1 = sessionStorage.getItem('artistselect1');
                     var artistselect2 = sessionStorage.getItem('artistselect2');

@@ -86,7 +86,7 @@ if (isset($_POST['opitment'])) {
 }
 
 
-//step 4 orderplaced
+      //step 4 orderplaced
 
 if (isset($_POST['lastprocedure'])) {
 
@@ -131,3 +131,6 @@ sessionStorage.clear()
 window.location = "http://localhost/testtheme/checkout?orderplace=Thanks for your order"
 
 </script>
+
+
+

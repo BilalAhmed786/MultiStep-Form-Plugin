@@ -38,7 +38,7 @@ function multi_form_step1($image)
                         </div>
 
                         </div>
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset id="final-consultation-all">
                     <img class="arrow-back" src="<?php echo $image; ?>" width="40px" height="40px">
@@ -115,7 +115,13 @@ function multi_form_step1($image)
         });
 
 
+       
+       
+       
         //first form session data
+       
+       
+       
         $(document).ready(function() {
             $(".anyavailable").click(function() {
                 var str = $(this).val();
@@ -127,7 +133,9 @@ function multi_form_step1($image)
         var sstep1 = sessionStorage.getItem('step1');
 
         $("#sstep1").val(sstep1);
-    </script>
+    
+        
+        </script>
 
 
 <?php
@@ -172,7 +180,7 @@ function multi_form_step2()
                         </div>
 
                     </div>
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <!--Ming Option-->
@@ -201,7 +209,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Brows Start-->
                 <fieldset id="option-brows-ming">
@@ -221,7 +229,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="new-treatment-brows-ming">
@@ -239,7 +247,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="services-brows-ming">
@@ -270,7 +278,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-brows-ming">
@@ -288,7 +296,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="touchup-brows-ming">
@@ -318,7 +326,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Brows end -->
 
@@ -340,7 +348,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-eyeliner-ming">
@@ -359,7 +367,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="touchup-eyeliner-ming">
@@ -400,7 +408,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Eyeliner end -->
 
@@ -420,7 +428,7 @@ function multi_form_step2()
                     </div>
 
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Scalp & hairlines-->
 
@@ -447,7 +455,7 @@ function multi_form_step2()
                         <input id="sstep2l" type='text'>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-lip-ming">
@@ -467,7 +475,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <!-- Lips end -->
@@ -492,7 +500,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Brows Start-->
                 <fieldset id="option-brows-fatimah">
@@ -511,7 +519,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="new-treatment-brows-fatimah">
@@ -529,7 +537,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="services-brows-fatimah">
@@ -562,7 +570,7 @@ function multi_form_step2()
                         <input id="sstep2q" type='text'>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-brows-fatimah">
@@ -580,7 +588,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="touchup-brows-fatimah">
@@ -610,7 +618,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Brows end -->
 
@@ -630,7 +638,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
 
                 </fieldset>
 
@@ -649,7 +657,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="touchup-eyeliner-fatimah">
@@ -690,7 +698,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Eyeliner end -->
 
@@ -712,7 +720,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Scalp & hairlines-->
 
@@ -736,7 +744,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-lip-fatimah">
@@ -754,7 +762,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <!-- Lips end -->
@@ -779,7 +787,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Brows Start-->
                 <fieldset id="option-brows-gloria">
@@ -797,7 +805,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="new-treatment-brows-gloria">
@@ -814,7 +822,7 @@ function multi_form_step2()
 
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="services-brows-gloria">
@@ -844,7 +852,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="Consultation-brows-gloria">
@@ -863,7 +871,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="touchup-brows-gloria">
@@ -890,7 +898,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Brows end -->
 
@@ -910,7 +918,7 @@ function multi_form_step2()
 
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none  type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Scalp & hairlines-->
 
@@ -924,7 +932,13 @@ function multi_form_step2()
                     <div class="field">
                         <div class="data-picker">
                             <label class="fs-subtitle-start" for="img">Select image:</label>
-                            <input type="file" id="img-consultation" name="imagefile" accept="image/*">
+
+                           
+                            <div class="image-preview">
+                            <input  id="img-consultation" type="file" name="imagefile" accept="image/*" onchange="previewImage(event)">
+                            
+                            <img id="thumbnail" src="" alt="">
+                            </div>
                             <label style="padding-top: 15px;" class="fs-subtitle-start" for="date-time-consultation">Consultation (date and time):</label>
                             <input type="datetime-local" id="date-time-field" name="datetimeconsultation" required>
                             <p style=color:red>Please select the date first</p>
@@ -965,12 +979,20 @@ function multi_form_step2()
                             <input id="date-time-final-procedure" type="datetime-local" name="finalproceduredate" required>
                             <p style=color:red>Please select the date first</p>
 
-                            <div class="image-preview">
+                                <div class="image-preview">
 
-                                <input id="img-consultation" type="file" name='imagefinalpro' accept="image/*  onchange=" previewImage(event)" />
+                                <input id="img-consultation" type="file" name='imagefinalpro' accept="image/*" onchange="previewImage(event)"/>
+                              
+                                
                                 <img id="thumbnail" alt="">
-                            </div>
-                            <input type="submit" name='finalprocedure' value="Book appointment" id="book-appointment-procedure" class="submit-button">
+                                    
+                                </div>  
+                                
+                                <input type="submit" name='finalprocedure' value="Book appointment" id="book-appointment-procedure" class="submit-button">
+                            
+                                    
+                                
+                                                 
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -1033,55 +1055,36 @@ function multi_form_step2()
             $("#" + target).show();
         });
 
+        
         $(".arrow-back").click(function() {
             $(this).siblings('.previous').click();
         });
 
+        
+        
         function previewImage(event) {
             var reader = new FileReader();
             reader.onload = function() {
                 var output = document.getElementById('thumbnail');
                 output.src = reader.result;
                 output.style.display = 'block'; // Show the thumbnail
+                output.style.width ='300px';
             };
             reader.readAsDataURL(event.target.files[0]);
         }
 
 
-        //multisteps form values stored into database
-
-
-        $(document).ready(function() {
-            // Get value on button click and show alert
-            $("#step1").click(function() {
-                var Gol = $("#step1").val();
-                sessionStorage.setItem('step1', Gol);
-            });
-        });
-
-        $(document).ready(function() {
-            $("#step2").click(function() {
-                var st = $("#step2").val();
-                sessionStorage.setItem('step2', st);
-            });
-        });
-
-        //session data storage
-
-
-
         //second form session data
-        $(document).ready(function() {
+       
+       
+       
+           $(document).ready(function() {
             $(".ming").click(function() {
                 var ming = $(this).val();
                 sessionStorage.setItem('step2', ming);
 
             });
         });
-
-
-
-
 
 
         $(document).ready(function() {
@@ -1091,9 +1094,6 @@ function multi_form_step2()
 
             });
         });
-
-
-
 
 
 
@@ -1139,11 +1139,10 @@ function multi_form_step2()
         });
 
 
-
-
-
         //session destroy on back
-        $(document).ready(function() {
+       
+       
+       $(document).ready(function() {
             $(".arrow-back").click(function() {
 
                 sessionStorage.clear();
@@ -1227,7 +1226,7 @@ function multi_form_step3()
                         </div>
 
                     </div>
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- Microblading, Combination brows, Nano needling, Powder ombre, Start -->
                 <fieldset id="microblading-combinationbrows-nanoneedling-powderombre">
@@ -1245,7 +1244,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="new-treatment-consultation">
@@ -1262,7 +1261,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="artist-brows-yes">
@@ -1287,7 +1286,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!-- also used for old brow tatoo correction-->
 
@@ -1317,7 +1316,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="artist-touchup">
@@ -1343,7 +1342,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none  type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Brows touchup End-->
 
@@ -1362,7 +1361,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="artist-micropigmentation-yes">
@@ -1384,7 +1383,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
 
                 <fieldset id="artist-micropigmentation-no">
@@ -1406,7 +1405,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Micropigmentation End-->
 
@@ -1467,7 +1466,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <!--Tightline tattoo end-->
 
@@ -1526,7 +1525,7 @@ function multi_form_step3()
                         </div>
                     </div>
                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                 </fieldset>
                 <fieldset id="old-brow-tatto-correction">
                     <img class="arrow-back" src="<?php echo $image; ?>" width="40px" height="40px">
@@ -1653,15 +1652,11 @@ function multi_form_step3()
             reader.onload = function() {
                 var output = document.getElementById('thumbnail');
                 output.src = reader.result;
-                output.style.display = 'block'; // Show the thumbnail
+                output.style.display = 'block'; // Show the 
+                output.style.width ='300px'
             };
             reader.readAsDataURL(event.target.files[0]);
         }
-
-
-
-
-
         //third form session data
         $(document).ready(function() {
             $(".ming").click(function() {
@@ -1766,7 +1761,7 @@ function multi_form_step3()
         $(document).ready(function() {
             $(".lastprocedure").click(function() {
                 var lastprocedure = $(this).val();
-                sessionStorage.setItem('lastprocedure', lastprocedure);
+                sessionStorage.setItem('lastpro',lastpro);
 
 
 
@@ -1865,7 +1860,7 @@ function multi_form_step4()
                             </div>
                         </div>
 
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <!-- Brows Start -->
                     <fieldset id="Brows">
@@ -1883,7 +1878,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="new-treatment-brows">
@@ -1901,7 +1896,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="brow-touch-up">
@@ -1930,7 +1925,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="services-brows">
@@ -1959,7 +1954,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
 
@@ -1980,7 +1975,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none!important  type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="artist-brows-no">
@@ -2005,7 +2000,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="artist-brows-yes">
@@ -2030,7 +2025,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
 
@@ -2055,7 +2050,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset id="Eyeliner-consultation">
                         <img class="arrow-back" src="<?php echo $image; ?>" width="40px" height="40px">
@@ -2072,7 +2067,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset id="Eyeliner-touchup">
                         <img class="arrow-back" src="<?php echo $image; ?>" width="40px" height="40px">
@@ -2105,7 +2100,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="artist-eyeliner">
@@ -2127,7 +2122,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
                     <!--Eyeliner End-->
 
@@ -2146,7 +2141,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="artist-scalp">
@@ -2167,7 +2162,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <!--Scalp-Hairlines End-->
@@ -2191,7 +2186,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
 
                     </fieldset>
 
@@ -2209,7 +2204,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="artist-lips">
@@ -2230,7 +2225,7 @@ function multi_form_step4()
                             </div>
                         </div>
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input style=display:none type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset id="final-photo-consultation">
@@ -2279,7 +2274,7 @@ function multi_form_step4()
 
                                 <div class="image-preview">
                                     <input id="img-consultation" type="file" name="imagefinalpro" accept="image/*" onchange="previewImage(event)" />
-                                    <img id="thumbnail" alt="">
+                                <img id="thumbnail" alt="">
                                 </div>
                                 <input type="submit" name="finalprocedure-final" value="Book appointment" id="book-appointment-procedure" class="submit-button">
                             </div>
@@ -2351,19 +2346,21 @@ function multi_form_step4()
                 $(this).siblings('.previous').click();
             });
 
+            
             function previewImage(event) {
                 var reader = new FileReader();
                 reader.onload = function() {
                     var output = document.getElementById('thumbnail');
                     output.src = reader.result;
                     output.style.display = 'block'; // Show the thumbnail
+                    output.style.width='300px';
                 };
                 reader.readAsDataURL(event.target.files[0]);
             }
 
             
             
-            
+            //session storage step 4
             
             $(document).ready(function() {
                 $(".ming").click(function() {
@@ -2396,7 +2393,7 @@ function multi_form_step4()
             $(document).ready(function() {
                 $(".consultation").click(function() {
                     var consultation = $(this).val();
-                    sessionStorage.setItem('consultation', consultation);
+                    sessionStorage.setItem('consult', consult);
 
                 });
             });
@@ -2433,7 +2430,7 @@ function multi_form_step4()
             $(document).ready(function() {
                 $(".lastprocedure").click(function() {
                     var lastprocedure = $(this).val();
-                    sessionStorage.setItem('lastprocedure', lastprocedure);
+                    sessionStorage.setItem('selfprocedure',lastprocedure);
 
                 });
             });
