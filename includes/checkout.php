@@ -259,15 +259,15 @@ function multi_form_step_checkout()
 
 
                 <div class="checkoutlist">
-                    <form id="ordersubmitform" action="http://localhost/testtheme/wp-content/plugins/moaibeauty/includes/ordersubmit.php" method="post">
-                        <fieldset>
+                    <form id="ordersubmitform" action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>" method="post">
+                        
                             <div class="form-group">
                                 <input id="firstitem" name="firstitem" type=text readonly>
                             </div>
                             <div class="form-group">
                                 <input id="date" name="date" value="<?php echo $_SESSION['time'] ?>" type=text readonly>
                             </div>
-                        </fieldset>
+                        
                         <input class='btnorder' type=submit name="orderplace" value="Order place">
                 </div>
                 </form>
@@ -324,7 +324,7 @@ function multi_form_step_checkout()
                         Checkout List
                     </h4>
                     <div class="checkoutlist">
-                        <form method=post action="http://localhost/testtheme/wp-content/plugins/moaibeauty/includes/ordersubmit.php">
+                        <form method=post action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>">
 
                             <!-- sessionvalues send through javasc -->
                             <div class="form-group">
@@ -434,7 +434,7 @@ function multi_form_step_checkout()
                     </h4>
                     <div class="checkoutlist">
 
-                        <form method=post action="http://localhost/testtheme/wp-content/plugins/moaibeauty/includes/ordersubmit.php">
+                        <form method=post action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>">
 
                             <!-- sessionvalues send through javasc -->
                             <div class="form-group">
@@ -559,7 +559,7 @@ function multi_form_step_checkout()
                         Checkout List
                     </h4>
                     <div class="checkoutlist">
-                        <form method=post action="http://localhost/testtheme/wp-content/plugins/moaibeauty/includes/ordersubmit.php">
+                        <form method=post action="<?php echo plugins_url('ordersubmit.php' , __FILE__ );?>">
 
                             <!-- sessionvalues send through javasc -->
 

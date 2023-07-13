@@ -58,7 +58,7 @@ function multi_form_activate() {
             'parent'    => 0, // Optional parent page ID
         ),
         array(
-            'title'     => 'checkout',
+            'title'     => 'checkoutForm',
             'content'   => '[checkout]',
             'template'  => '', // Template name or file path
             'parent'    => 0, // Optional parent page ID
@@ -94,10 +94,8 @@ function multi_form_activate() {
 
         //tables create on plugin activation 
 
-
-
-
 function multi_form_consultation()
+
 {
     global $wpdb, $table_prefix;
     $wp_opitment = $table_prefix . 'bookopitment';
@@ -120,4 +118,5 @@ function multi_form_consultation()
 
  include("includes/includepages.php");
  include("includes/checkout.php");
- 
+
+    

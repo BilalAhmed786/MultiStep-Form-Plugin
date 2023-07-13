@@ -3,10 +3,7 @@
 
     session_start();
 
-  
-    
-    
-    if(isset($_POST['orderplace'])){
+  if(isset($_POST['orderplace'])){
 
 
         $firstitem= $_POST['firstitem'];
@@ -19,9 +16,7 @@
        $wpdb->query("INSERT INTO wp_bookopitment(consultation,date) VALUES ('$firstitem','$date')");
    
     
-     
-
-}
+     }
 
 
 //step 2 orderplaced
