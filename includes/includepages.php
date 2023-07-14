@@ -9,6 +9,7 @@ function multi_form_step1($image)
 
     <div class="row">
         <div class="col-md-12 ">
+            
             <form id="msform" method="post" action='http://localhost/testtheme/checkout/'>
                 <!-- Book free consultation -->
                 <fieldset id="artist-all">
@@ -46,7 +47,7 @@ function multi_form_step1($image)
                     <div class="field">
                         <div class="data-picker">
                             <label class="fs-subtitle-start" for="date-time-consultation">Consultation (date and time):</label>
-                            <input type="datetime-local" id="date-time-final-consultation" name="date-time-consultation" required>
+                            <input type="datetime-local" id="date-time-final-consultation" name="datetimeconsultation">
                             <p style=color:red>Please select the date first</p>
                             <input type="submit" name="bookconultation" value="Book consultation session" id="book-consultation-session" class="submit-button">
                         </div>
@@ -135,6 +136,23 @@ function multi_form_step1($image)
         $("#sstep1").val(sstep1);
     
         
+        
+        $(document).ready(function(e) {
+            $(".submit-button").click(function() {
+                 var noval = $(this).val();
+
+                if(!noval){
+                e.preventDefault();
+                alert("date shoulb be selected");
+
+            }
+
+
+
+        })
+    })
+
+
         </script>
 
 
@@ -159,7 +177,8 @@ function multi_form_step2()
 
     <div class="row">
         <div class="col-md-12 ">
-            <form id="msform" method="post" action='http://localhost/testtheme/checkout' enctype="multipart/form-data" novalidate>
+        <iframe name="votar" style="display:none;"></iframe>
+            <form id="msform" method="post" action='http://localhost/testtheme/checkout' enctype="multipart/form-data" target="votar" novalidate>
                 <fieldset>
                     <h3 class="fs-subtitle-start">Select an artist</h3>
                     <div class="field">

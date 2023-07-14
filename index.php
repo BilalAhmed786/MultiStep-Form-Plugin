@@ -14,6 +14,8 @@ defined('ABSPATH') or die();
 
 function saificontactform_custom_scripts(){
     wp_enqueue_script('jQuery',plugins_url('js/jquery-3.7.0.min.js',__FILE__),'','3.7.0',true);
+    // Enqueue jQuery Validate plugin
+    wp_enqueue_script('jquery-validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js', array('jquery'), '1.19.3', true);
     wp_enqueue_script('my-script',plugins_url('js/custom.js',__FILE__),[],'','all');
     wp_enqueue_style('custom-bootstrap',plugins_url('css/bootstrap.min.css',__FILE__),[],'','all');
     wp_enqueue_style('multi-step1-css',plugins_url('css/style.css',__FILE__),[],'','all');
@@ -100,6 +102,7 @@ function multi_form_consultation()
     global $wpdb, $table_prefix;
     $wp_opitment = $table_prefix . 'bookopitment';
     $wp_image = $table_prefix . 'images';
+
 
 
     $q = "CREATE TABLE IF NOT EXISTS `$wp_opitment`(`id` INT NOT NULL AUTO_INCREMENT , `consultation` VARCHAR(100) NOT NULL , `date` date, PRIMARY KEY (`id`)) ENGINE = InnoDB";

@@ -672,9 +672,6 @@ function multi_form_step_checkout()
             
             echo '<p style=color:red;text-align:center>'.$orderplace.'</p>';
 
-    }else{
-
-             echo "<p style=color:red;text-align:center>No item selected yet</p>";
     }
 }
 
