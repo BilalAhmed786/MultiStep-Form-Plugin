@@ -1,7 +1,7 @@
 <?php
-    session_start();
+session_start();
 
-    if (isset($_POST['bookconultation'])) {
+if (isset($_POST['bookconultation'])) {
 
     $time = $_POST['date-time-consultation'];
 
@@ -27,11 +27,11 @@ if (isset($_POST['consultation'])) {
     $file = isset($_FILES['imagefile']);
 
 
-    $filename =isset($_FILES['name']);
+    $filename = isset($_FILES['name']);
 
     // Get the destination path for the uploaded file
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-    
+
     $file_path = $upload_dir . basename(isset($file['name']));
 
     // Move the uploaded file to the destination folder
@@ -41,8 +41,6 @@ if (isset($_POST['consultation'])) {
     $_SESSION['time2'] = $time;
 
     $_SESSION['image2'] = isset($file['name']);
-
-    
 }
 
 if (isset($_POST['appointment'])) {
@@ -59,27 +57,23 @@ if (isset($_POST['appointment'])) {
 if (isset($_POST['finalprocedure'])) {
 
     $date = $_POST['finalproceduredate'];
-    
+
     $file = $_FILES['imagefinalpro'];
 
 
-    
+
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-  
-    
+
+
     $file_path = $upload_dir . basename($file['name']);
 
     // Move the uploaded file to the destination folder
     move_uploaded_file($file['tmp_name'], $file_path);
-    
+
 
     $_SESSION['image2'] = $file['name'];
 
     $_SESSION['time2'] = $date;
-
-    
-
-   
 }
 
 
@@ -90,10 +84,10 @@ if (isset($_POST['consul-tation'])) {
     $time = $_POST['datetimeconsultation'];
 
     $file = $_FILES['imagefile'];
-    
+
 
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-    
+
     $file_path = $upload_dir . basename($file['name']);
 
     // Move the uploaded file to the destination folder
@@ -105,9 +99,6 @@ if (isset($_POST['consul-tation'])) {
     $_SESSION['time3'] = $time;
 
     $_SESSION['image3'] = $file['name'];
-
-
-   
 }
 
 if (isset($_POST['appoint-ment'])) {
@@ -125,10 +116,10 @@ if (isset($_POST['final-procedure'])) {
 
     $date = $_POST['finalproceduredate'];
     $file = $_FILES['imagefinalpro'];
-   
+
 
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-    
+
     $file_path = $upload_dir . basename($file['name']);
 
     // Move the uploaded file to the destination folder
@@ -140,8 +131,6 @@ if (isset($_POST['final-procedure'])) {
     $_SESSION['image3'] = $file['name'];
 
     $_SESSION['time3'] = $date;
-
-  
 }
 
 
@@ -152,10 +141,10 @@ if (isset($_POST['consultation-final'])) {
     $time = $_POST['datetimeconsultation'];
 
     $file = $_FILES['imagefile'];
-   
+
 
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-    
+
     $file_path = $upload_dir . basename($file['name']);
 
     // Move the uploaded file to the destination folder
@@ -168,8 +157,7 @@ if (isset($_POST['consultation-final'])) {
 
     $_SESSION['image4'] = $file['name'];
 
-        echo $_SESSION['image4'];
-   
+    echo $_SESSION['image4'];
 }
 
 if (isset($_POST['appointment-final'])) {
@@ -187,23 +175,20 @@ if (isset($_POST['finalprocedure-final'])) {
 
     $date = $_POST['finalproceduredate'];
     $file = $_FILES['imagefinalpro'];
-   
+
 
     $upload_dir = plugin_dir_path(__FILE__) . 'images/';
-    
+
     $file_path = $upload_dir . basename($file['name']);
 
     // Move the uploaded file to the destination folder
     move_uploaded_file($file['tmp_name'], $file_path);
 
 
-  
-   $_SESSION['image4'] = $file['name'];
+
+    $_SESSION['image4'] = $file['name'];
 
     $_SESSION['time4'] = $date;
-
-
-  
 }
 
 //step 4 checkout data
@@ -259,15 +244,15 @@ function multi_form_step_checkout()
 
 
                 <div class="checkoutlist">
-                    <form id="ordersubmitform" action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>" method="post">
-                        
-                            <div class="form-group">
-                                <input id="firstitem" name="firstitem" type=text readonly>
-                            </div>
-                            <div class="form-group">
-                                <input id="date" name="date" value="<?php echo $_SESSION['time'] ?>" type=text readonly>
-                            </div>
-                        
+                    <form id="ordersubmitform" action="<?php echo plugins_url('ordersubmit.php', __FILE__); ?>" method="post">
+
+                        <div class="form-group">
+                            <input id="firstitem" name="firstitem" type=text readonly>
+                        </div>
+                        <div class="form-group">
+                            <input id="date" name="date" value="<?php echo $_SESSION['time'] ?>" type=text readonly>
+                        </div>
+
                         <input class='btnorder' type=submit name="orderplace" value="Order place">
                 </div>
                 </form>
@@ -324,7 +309,7 @@ function multi_form_step_checkout()
                         Checkout List
                     </h4>
                     <div class="checkoutlist">
-                        <form method=post action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>">
+                        <form method=post action="<?php echo plugins_url('ordersubmit.php', __FILE__); ?>">
 
                             <!-- sessionvalues send through javasc -->
                             <div class="form-group">
@@ -336,10 +321,10 @@ function multi_form_step_checkout()
                             </div>
 
                             <div class="form-group">
-                                
+
                                 <input type="hidden" name='image' value="<?php if (isset($_SESSION['image2'])) {
-                                                                echo $_SESSION['image2'];
-                                                            } ?>">
+                                                                                echo $_SESSION['image2'];
+                                                                            } ?>">
                             </div>
                             <input class='btnorder' type=submit name="consultation" value=submit>
                     </div>
@@ -399,7 +384,7 @@ function multi_form_step_checkout()
 
                     }
                 </script>
-                
+
 
 
             </body>
@@ -434,7 +419,7 @@ function multi_form_step_checkout()
                     </h4>
                     <div class="checkoutlist">
 
-                        <form method=post action="<?php echo plugins_url( 'ordersubmit.php' , __FILE__ );?>">
+                        <form method=post action="<?php echo plugins_url('ordersubmit.php', __FILE__); ?>">
 
                             <!-- sessionvalues send through javasc -->
                             <div class="form-group">
@@ -524,7 +509,7 @@ function multi_form_step_checkout()
 
                     }
                 </script>
-                
+
 
 
             </body>
@@ -533,9 +518,13 @@ function multi_form_step_checkout()
 
         <?php
         //step 4 form data show
-    }elseif (isset($_POST['consultation-final']) || isset($_POST['appointment-final']) || isset($_POST['finalprocedure-final'])) {
+    } elseif (isset($_POST['consultation-final']) || isset($_POST['appointment-final']) || isset($_POST['finalprocedure-final'])) {
 
+
+        require('stripe-php-master/init.php');
+        \stripe\stripe::setApiKey('sk_test_51NcvwgKgFXig68gSM8sYK2D4knXvMrB75jt57Bv0SqpT76apOiMaugJqHTbByQMXkd7Wc93LzMHnpVJlvlObTs9D00sRrTnLzJ')
         ?>
+
 
             <!DOCTYPE html>
             <html lang="en">
@@ -557,9 +546,10 @@ function multi_form_step_checkout()
                 <div class="checkoutcontainer">
                     <h4 style=margin-top:100px;font-family:Montserrat;>
                         Checkout List
+                        <img src="../vendor/1 .jpg">
                     </h4>
                     <div class="checkoutlist">
-                        <form method=post action="<?php echo plugins_url('ordersubmit.php' , __FILE__ );?>">
+                        <form method=post action="<?php echo plugins_url('ordersubmit.php', __FILE__); ?>">
 
                             <!-- sessionvalues send through javasc -->
 
@@ -567,15 +557,23 @@ function multi_form_step_checkout()
                                 <div id=valueshow></div>
                             </div>
                             <div class="form-group">
-                            <input id="date" type=text name='date' value="<?php echo $_SESSION['time4'] ?>" readonly>
+                                <input id="date" type=text name='date' value="<?php echo $_SESSION['time4'] ?>" readonly>
                             </div>
 
-                            <input type=hidden  name="image" value="<?php echo $_SESSION['image4'] ?>">
+                            <input type=hidden name="image" value="<?php echo $_SESSION['image4'] ?>">
 
-                            </div>
-                    <input class='btnorder' type=submit name=lastprocedure value=submit>
 
-                    </form>
+                                 <script src="https://checkout.stripe.com/checkout.js" 
+                                    class="stripe-button" 
+                                    data-key="pk_test_51NcvwgKgFXig68gS6L70mmG6mn6OYPuyBgpMbqQtRtEwfhvfzjU8Emuh8kHJn9U512rxYValI8Jn6MUxoUtf3D2B00k8kkT6Im" 
+                                    data-amount="50000" 
+                                    data-name="Example Payment" 
+                                    data-description="Example description" 
+                                    data-currency="usd">
+                                </script>
+
+                        </form>
+                    </div>
 
                 </div>
 
@@ -664,14 +662,13 @@ function multi_form_step_checkout()
 
     <?php
 
-    }elseif(isset($_GET['orderplace'])){
+    } elseif (isset($_GET['orderplace'])) {
 
-            
-            $orderplace = $_GET['orderplace'];
 
-            
-            echo '<p style=color:red;text-align:center>'.$orderplace.'</p>';
+        $orderplace = $_GET['orderplace'];
 
+
+        echo '<p style=color:red;text-align:center>' . $orderplace . '</p>';
     }
 }
 

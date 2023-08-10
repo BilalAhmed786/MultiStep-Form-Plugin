@@ -12,16 +12,17 @@ defined('ABSPATH') or die();
 
 
 
-function saificontactform_custom_scripts(){
+function moai_academy_scripts(){
     wp_enqueue_script('jQuery',plugins_url('js/jquery-3.7.0.min.js',__FILE__),'','3.7.0',true);
     // Enqueue jQuery Validate plugin
     wp_enqueue_script('jquery-validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js', array('jquery'), '1.19.3', true);
     wp_enqueue_script('my-script',plugins_url('js/custom.js',__FILE__),[],'','all');
+    wp_enqueue_script('stripe', 'https://js.stripe.com/v3/', array(), null, true);
     wp_enqueue_style('custom-bootstrap',plugins_url('css/bootstrap.min.css',__FILE__),[],'','all');
     wp_enqueue_style('multi-step1-css',plugins_url('css/style.css',__FILE__),[],'','all');
    
     }
-    add_action('wp_enqueue_scripts','saificontactform_custom_scripts' );
+    add_action('wp_enqueue_scripts','moai_academy_scripts' );
 
 
 

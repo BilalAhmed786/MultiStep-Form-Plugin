@@ -1857,7 +1857,7 @@ function multi_form_step4()
         <!-- MultiStep Form -->
         <div class="row">
             <div class="col-md-12 ">
-                <form id="msform" method="post" action="http://localhost/testtheme/checkout" enctype="multipart/form-data" novalidate>
+                <form id="msform" method="post" action="http://localhost/testtheme/checkout/" enctype="multipart/form-data" novalidate>
                     <fieldset>
                         <h3 class="fs-subtitle-start">Select an area</h3>
                         <div class="field">
